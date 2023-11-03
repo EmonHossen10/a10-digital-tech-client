@@ -1,0 +1,26 @@
+[
+  {
+    "brand_name": "Apple",
+    "brand_image": "https://i.ibb.co/Tt17wzd/apple.jpg"
+  },
+  {
+    "brand_name": "Samsung",
+    "brand_image": "https://i.ibb.co/MBRkf3Y/samsung.webp"
+  },
+  {
+    "brand_name": "Sony",
+    "brand_image": "https://i.ibb.co/ZcfgYGV/aram-sabah-j-APFr-A9-YJs-Q-unsplash.jpg"
+  },
+  {
+    "brand_name": "Google",
+    "brand_image": "https://i.ibb.co/WvRbhnT/google.jpg"
+  },
+  {
+    "brand_name": "Intel",
+    "brand_image": "https://i.ibb.co/ydHVg2b/intel.webp"
+  },
+  {
+    "brand_name": "Huawei",
+    "brand_image": "https://i.ibb.co/gTbgfP2/huawei.png"
+  }
+]
