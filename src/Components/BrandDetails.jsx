@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import BrandDetailsSpecific from "./BrandDetailsSpecific";
 import Carousel from "./Carousel";
+import Footer from "./Footer";
 
 const BrandDetails = () => {
   let datas = useLoaderData();
@@ -14,9 +15,9 @@ const BrandDetails = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <Carousel specificData={specificData} ></Carousel>
+      <Carousel specificData={specificData}></Carousel>
 
-      <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-10 w-10/12 mx-auto"  >
         {specificData.map((specific, idx) => (
           <>
             {" "}
@@ -27,6 +28,7 @@ const BrandDetails = () => {
           </>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 };
