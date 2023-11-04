@@ -8,12 +8,8 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? " underline font-bold  "
-              : ""
-          }  
+            isPending ? "pending" : isActive ? " underline font-bold  " : ""
+          }
         >
           Home{" "}
         </NavLink>
@@ -36,16 +32,6 @@ const Navbar = () => {
           } //bg-sky-300 p-2 rounded-lg
         >
           My Cart
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " underline font-bold " : ""
-          } //bg-sky-300 p-2 rounded-lg
-        >
-         Login
         </NavLink>
       </li>
     </>
@@ -88,8 +74,10 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1  ">{navlinks}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end ">
+        <Link to="/login" >
+          <button className="btn btn-ghost ">Login</button>
+        </Link>
       </div>
     </div>
   );

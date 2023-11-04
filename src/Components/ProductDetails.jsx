@@ -64,7 +64,7 @@ const ProductDetails = () => {
           </div>
           <div className="flex justify-center gap-10 ">
             <button className="btn btn-success" onClick={handleBuy}>Buy Now </button>
-            <button className="btn btn-info" > Add to cart</button>
+            <button className="btn btn-info" > Add to cart</button> 
           </div>
         </div>
       </div>
