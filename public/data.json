@@ -1,26 +1,26 @@
 [
   {
-    "brand_name": "Apple",
-    "brand_image": "https://i.ibb.co/Tt17wzd/apple.jpg"
+    "Image": "https://i.ibb.co/w4rjyg8/images-q-tbn-ANd9-Gc-Ss1-Jb-NFep-ML5-ED0c-KM8gt-Z4-Qb-Xx86e-Xo9-LUQ-usqp-CAU.jpg",
+    "Name": "Air Pods",
+    "Band_Name": "Huawei",
+    "Price": 500
   },
   {
-    "brand_name": "Samsung",
-    "brand_image": "https://i.ibb.co/MBRkf3Y/samsung.webp"
+    "Image": "https://i.ibb.co/QXp8vTx/list-d14.jpg",
+    "Name": " Huawei Laptop",
+    "Band_Name": "Huawei",
+    "Price": 2100
   },
   {
-    "brand_name": "Sony",
-    "brand_image": "https://i.ibb.co/ZcfgYGV/aram-sabah-j-APFr-A9-YJs-Q-unsplash.jpg"
+    "Image": "https://i.ibb.co/jkHXJL4/huawei-mateview-usb-c-projection.jpg",
+    "Name": " Huawei Monitor",
+    "Band_Name": "Huawei",
+    "Price": 1000
   },
   {
-    "brand_name": "Google",
-    "brand_image": "https://i.ibb.co/WvRbhnT/google.jpg"
-  },
-  {
-    "brand_name": "Intel",
-    "brand_image": "https://i.ibb.co/ydHVg2b/intel.webp"
-  },
-  {
-    "brand_name": "Huawei",
-    "brand_image": "https://i.ibb.co/gTbgfP2/huawei.png"
+    "Image": "https://i.ibb.co/5cDYJW3/images-q-tbn-ANd9-Gc-THLn-UNL4-Sw-Mp-Vayz-R7-ZAQQim-Bmjd1x9-Kg-Cg-usqp-CAU.jpg",
+    "Name": "Huawei Mobile",
+    "Band_Name": "Huawei",
+    "Price": 1200
   }
 ]

@@ -8,6 +8,7 @@ import Home from "./Pages/Home";
 import AddProduct from "./Components/AddProduct";
 import MyCart from "./Components/MyCart";
 import Login from "./Components/Login";
+import BrandDetails from "./Components/BrandDetails";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
         path:"/",
         element:<Home></Home>,
         loader:()=>fetch("http://localhost:5000/brands")
+      },
+      {
+        path:"/branddetails/:name",
+        element:<BrandDetails></BrandDetails>,
+        loader:()=>fetch(`http://localhost:5000/branddetails/`)
       },
       {
         path:"/addproduct",
