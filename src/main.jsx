@@ -10,6 +10,7 @@ import MyCart from "./Components/MyCart";
 import Login from "./Components/Login";
 import BrandDetails from "./Components/BrandDetails";
 import ProductDetails from "./Components/ProductDetails";
+import Register from "./Components/Register";
 
 const router = createBrowserRouter([
   {
@@ -27,17 +28,24 @@ const router = createBrowserRouter([
         loader: () => fetch(`http://localhost:5000/branddetails/`),
       },
       {
-        path:"/productdetails/:id",
-        element:<ProductDetails></ProductDetails>,
-        loader:({params})=>fetch(`http://localhost:5000/branddetails/${params.id}`)
-      },
-      {
-        path: "/addproduct",
-        element: <AddProduct></AddProduct>,
+        path: "/productdetails/:id",
+        element: <ProductDetails></ProductDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/branddetails/${params.id}`),
       },
       {
         path: "/mycart",
         element: <MyCart></MyCart>,
+      },
+
+      {
+        path: "/addproduct",
+        element: <AddProduct></AddProduct>,
+      },
+
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/login",

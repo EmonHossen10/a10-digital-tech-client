@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
 
-const Login = () => {
-  return (
-    <div>
-      <Navbar></Navbar>
-
-      <div className="hero min-h-screen bg-base-200">
+ 
+const Register = () => {
+    return (
+        <div>
+             <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+            <h1 className="text-5xl font-bold">Register Here </h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form className="card-body">
@@ -39,18 +36,17 @@ const Login = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-accent">Login</button>
+                <button className="btn btn-primary">Register</button>
               </div>
-              <div className="text-center mt-2">
-                <p>New here ? <Link className="text-blue-800 font-bold underline"  to="/register" >Register </Link></p>
+              <div className="text-center mt-2" >
+                <p>Already have an account <Link className="text-blue-800 font-bold underline"  to="/login" >Login </Link></p>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <Footer></Footer>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default Login;
+export default Register;

@@ -18,7 +18,7 @@ const BrandCard = ({ brand }) => {
           hover:from-green-400 hover:to-blue-500
            "
             >
-              Details
+              Show Details
             </button> 
           </Link>
         </div>

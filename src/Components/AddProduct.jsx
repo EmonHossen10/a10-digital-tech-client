@@ -6,19 +6,19 @@ const AddProduct = () => {
   const handleAddProduct = (e) => {
     e.preventDefault();
     const form = e.target;
-    const photo = form.photo.value;
-    const p_name = form.productName.value;
-    const brand_name = form.brandName.value;
+    const Image = form.photo.value;
+    const Name = form.productName.value;
+    const Band_Name = form.brandName.value;
     const p_type = form.productType.value;
-    const price = form.price.value;
+    const Price = form.price.value;
     const rating = form.rating.value;
     const description = form.description.value;
     const product = {
-      photo,
-      p_name,
-      brand_name,
+      Image,
+      Name,
+      Band_Name,
       p_type,
-      price,
+      Price,
       rating,
       description,
     };
@@ -83,13 +83,14 @@ const AddProduct = () => {
               <label className="label">
                 <span className="label-text">Brand Name :</span>
               </label>
-              <input
-                type="text"
-                name="brandName"
-                placeholder="Brand Name "
-                className="input input-bordered input-info  "
-                required
-              />
+              <select className="input input-bordered input-info  " id="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Samsung</option>
+                <option value="cherry">Sony</option>
+                <option value="grape">Google</option>
+                <option value="orange">Intel</option>
+                <option value="strawberry">Huawei</option>
+              </select>
             </div>
             <div className="form-control">
               <label className="label">
