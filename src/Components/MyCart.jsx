@@ -29,11 +29,7 @@ const MyCart = () => {
         </>
       )}
 
-      {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10 w-10/12 mx-auto" >
-             {
-                cartData.map((data,idx)=><MyCartDetails key={idx} data={data} ></MyCartDetails>)
-             }
-             </div> */}
+     
 
       <Footer></Footer>
     </div>

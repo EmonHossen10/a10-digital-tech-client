@@ -1,6 +1,17 @@
+import Swal from "sweetalert2";
+
 const MyCartDetails = ({ data }) => {
   const { Image, Name, Band_Name, Price } = data;
-  console.log(data)
+  console.log(data);
+
+  const handleBuy = () => {
+    Swal.fire({
+      icon: "success",
+      title: "Successfully Buy",
+      text: "Successfully Buy the product",
+ 
+    });
+  };
   return (
     <div className="card  bg-base-100 shadow-xl">
       <figure>
@@ -44,6 +55,9 @@ const MyCartDetails = ({ data }) => {
         </div>
 
         <div className="  flex justify-around  ">
+          <button onClick={handleBuy} className="btn btn-success">
+            Buy Now{" "}
+          </button>
           <button className="btn btn-warning">Delete</button>
         </div>
       </div>

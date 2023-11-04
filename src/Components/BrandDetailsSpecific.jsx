@@ -14,7 +14,7 @@ const BrandDetailsSpecific = ({ specific }) => {
         <h2 className="text-2xl font-bold">Name : {Name} </h2>
 
         <div className="text-center my-5">
-          Price : {Price}
+          Price : ${Price}
           <p className="my-3">
             <div className="rating">
               <input
@@ -26,7 +26,6 @@ const BrandDetailsSpecific = ({ specific }) => {
                 type="radio"
                 name="rating-2"
                 className="mask mask-star-2 bg-orange-400"
-               
               />
               <input
                 type="radio"
@@ -51,7 +50,9 @@ const BrandDetailsSpecific = ({ specific }) => {
           <Link to={`/productdetails/${_id}`}>
             <button className="btn btn-success">Details</button>
           </Link>
-          <button className="btn btn-warning">Update</button>
+          <Link to={`/update/${_id}`} >
+            <button className="btn btn-warning">Update</button>
+          </Link>
         </div>
       </div>
     </div>
