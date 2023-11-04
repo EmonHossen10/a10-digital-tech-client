@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css"
+import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Layout/Root";
@@ -9,35 +9,41 @@ import AddProduct from "./Components/AddProduct";
 import MyCart from "./Components/MyCart";
 import Login from "./Components/Login";
 import BrandDetails from "./Components/BrandDetails";
+import ProductDetails from "./Components/ProductDetails";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:"/",
-        element:<Home></Home>,
-        loader:()=>fetch("http://localhost:5000/brands")
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/brands"),
       },
       {
-        path:"/branddetails/:name",
-        element:<BrandDetails></BrandDetails>,
-        loader:()=>fetch(`http://localhost:5000/branddetails/`)
+        path: "/branddetails/:name",
+        element: <BrandDetails></BrandDetails>,
+        loader: () => fetch(`http://localhost:5000/branddetails/`),
       },
       {
-        path:"/addproduct",
-        element:<AddProduct></AddProduct>
+        path:"/productdetails/:id",
+        element:<ProductDetails></ProductDetails>,
+        loader:({params})=>fetch(`http://localhost:5000/branddetails/${params.id}`)
       },
       {
-        path:"/mycart",
-        element:<MyCart></MyCart>
+        path: "/addproduct",
+        element: <AddProduct></AddProduct>,
       },
       {
-        path:"/login",
-        element:<Login></Login>
+        path: "/mycart",
+        element: <MyCart></MyCart>,
       },
-    ]
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+    ],
   },
 ]);
 
