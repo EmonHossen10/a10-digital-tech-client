@@ -6,15 +6,13 @@ import Schedule from "../Components/Schedule";
 
 const Home = () => {
   return (
-    <div>
+    <div   >
       <Navbar></Navbar>
       <Banner></Banner>
       <Schedule></Schedule>
       <Brands></Brands>
 
       <Footer></Footer>
-      
-       
     </div>
   );
 };

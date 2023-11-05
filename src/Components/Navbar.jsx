@@ -1,10 +1,34 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, Logout } = useContext(AuthContext);
+  const [mode, setMode] = useState("light");
+  const changeTheme = () => {
+    const html = document.documentElement;
+
+    if (mode == "light") {
+      html.classList.remove("light");
+      html.classList.add("dark");
+      setMode("dark");
+      localStorage.setItem("mode", "dark");
+    } else {
+      html.classList.remove("dark");
+      html.classList.add("light");
+      setMode("light");
+      localStorage.setItem("mode", "light");
+    }
+  };
+
+  useEffect(() => {
+    const currentMode = localStorage.getItem("mode") || "light";
+    setMode(currentMode);
+    const html = document.documentElement;
+    html.classList.add(currentMode)
+
+  }, []);
 
   const HandleLogout = () => {
     Logout().then(() => {
@@ -93,7 +117,9 @@ const Navbar = () => {
         {user ? (
           <div className="flex">
             <p className=" flex  flex-col lg:flex-row items-center gap-2 lg:mr-3">
-              <span className="lg:text-lg  font-semibold"  >{user.displayName}</span>
+              <span className="lg:text-lg  font-semibold">
+                {user.displayName}
+              </span>
               <div className="avatar">
                 <div className="w-8 mask rounded-full">
                   <img src={user.photoURL} />
@@ -111,6 +137,9 @@ const Navbar = () => {
           </Link>
         )}
       </div>
+      <button onClick={changeTheme} className="btn ">
+        Theme{" "}
+      </button>
     </div>
   );
 };
