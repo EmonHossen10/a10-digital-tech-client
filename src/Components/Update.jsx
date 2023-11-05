@@ -49,7 +49,7 @@ const Update = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <h2>Name : {loadedUser.Name}</h2>
+ 
 
       <div className="hero min-h-screen bg-base-200   ">
         <div className="shadow-2xl bg-base-300 w-8/12 rounded-xl mx-auto">
