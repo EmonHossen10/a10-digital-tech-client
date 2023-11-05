@@ -12,11 +12,13 @@ import BrandDetails from "./Components/BrandDetails";
 import ProductDetails from "./Components/ProductDetails";
 import Register from "./Components/Register";
 import Update from "./Components/Update";
+import ErrorPage from "./Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
