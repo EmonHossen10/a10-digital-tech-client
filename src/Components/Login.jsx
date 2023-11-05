@@ -4,13 +4,15 @@ import Navbar from "./Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, GoogleSignIn } = useContext(AuthContext);
 
-  const location=useLocation()
-  console.log("location in login page",location);
-  const navigate=useNavigate()
+  const location = useLocation();
+  console.log("location in login page", location);
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -30,23 +32,41 @@ const Login = () => {
 
         // navigate after login
 
-        navigate(location?.state  ? location.state : "/")
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
-        Swal.fire({
-          icon: "error",
-          title: "Dont Have an Account",
-          text: "Please Register first",
-        });
+        toast.error(error.message);
       });
   };
+
+  /// google
+  const handleGoogleLogin = () => {
+    GoogleSignIn()
+      .then((result) => {
+        console.log(result.user);
+
+        Swal.fire({
+          icon: "success",
+          title: "Successfully added",
+          text: "Products Successfully added to backend",
+        });
+        // navigate after login
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error.message);
+
+        toast.error(error.message);
+      });
+  };
+
   return (
     <div>
       <Navbar></Navbar>
 
       <div className="hero min-h-screen bg-base-200   ">
-        <div className="shadow-2xl bg-base-300 w-6/12 rounded-xl mx-auto">
+        <div className="shadow-2xl bg-base-300 lg:w-6/12 w-11/12 rounded-xl mx-auto">
           <form onSubmit={handleLogin} className="card-body">
             <h2 className="text-black font-bold text-3xl text-center pb-4">
               Login Here
@@ -92,10 +112,17 @@ const Login = () => {
                 </Link>
               </p>
             </div>
+            <h2
+              onClick={handleGoogleLogin}
+              className="btn btn-xs    sm:btn-sm md:btn-md lg:btn-lg"
+            >
+              Google Login
+            </h2>
           </form>
         </div>
       </div>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 };
