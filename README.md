@@ -1,6 +1,6 @@
 # features and functionalities :
 
-- **Database:** Main part is i use mongoDB database for store data. .
+- **Database:** Main part is i use mongoDB database for store data.
 
 - **Navigation:** The homepage features a navigation bar that allows users to easily navigate to different sections of the website.
 

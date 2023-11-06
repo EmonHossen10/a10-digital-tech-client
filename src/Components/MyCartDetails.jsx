@@ -1,16 +1,35 @@
+/* eslint-disable react/prop-types */
 import Swal from "sweetalert2";
 
-const MyCartDetails = ({ data }) => {
-  const { Image, Name, Band_Name, Price } = data;
-  console.log(data);
+const MyCartDetails = ({ data, setCartData, cartData }) => {
+  const { _id, Image, Name, Band_Name, Price } = data;
 
   const handleBuy = () => {
     Swal.fire({
       icon: "success",
       title: "Successfully Buy",
       text: "Successfully Buy the product",
- 
     });
+  };
+
+  const handleDelete = (_id) => {
+    console.log(_id);
+    fetch(`http://localhost:5000/cart/${_id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount > 0) {
+          Swal.fire({
+            icon: "success",
+            title: "Successfully Delete",
+            text: "Successfully Delete from cart",
+          });
+          const remaining = cartData.filter((data) => data._id !== _id);
+          setCartData(remaining);
+        }
+      });
   };
   return (
     <div className="card  bg-base-100 shadow-xl">
@@ -58,7 +77,9 @@ const MyCartDetails = ({ data }) => {
           <button onClick={handleBuy} className="btn btn-success">
             Buy Now{" "}
           </button>
-          <button className="btn btn-warning">Delete</button>
+          <button onClick={() => handleDelete(_id)} className="btn btn-warning">
+            Delete
+          </button>
         </div>
       </div>
     </div>
