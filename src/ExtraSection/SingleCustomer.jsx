@@ -1,11 +1,7 @@
- 
-
-const SingleCustomer = ({customer}) => {
-   
-    const { name ,review,imageUrl}=customer
-    return (
-       
-        <div className="card  my-10 bg-base-100 shadow-xl">
+const SingleCustomer = ({ customer }) => {
+  const { name, review, imageUrl } = customer;
+  return (
+    <div className="card  my-10 bg-base-100 shadow-xl">
       <figure>
         <div className="avatar ">
           <div className="w-32 rounded-full">
@@ -46,7 +42,7 @@ const SingleCustomer = ({customer}) => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default SingleCustomer;

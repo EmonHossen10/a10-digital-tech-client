@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
  
 
 const Offer = () => {
@@ -13,7 +15,7 @@ const Offer = () => {
             <div className="bg-white p-6 lg:w-1/2 lg:mt-0 mt-6">
               <h2 className="text-3xl font-bold text-black mb-4">Special  Offer in November</h2>
               <p className="text-gray-600 text-lg mb-4">Get the latest electronics at 30% discount </p>
-              <a href="/electronics-offer" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Shop Now</a>
+              <Link to="/"   className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Shop Now</Link>
             </div>
           </div>
         </div>
