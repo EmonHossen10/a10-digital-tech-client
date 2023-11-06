@@ -1,8 +1,8 @@
 # features and functionalities :
 
-- **Navigation:** The homepage features a navigation bar that allows users to easily navigate to different sections of the website.
-
 - **Database:** Main part is i use mongoDB database for store data. .
+
+- **Navigation:** The homepage features a navigation bar that allows users to easily navigate to different sections of the website.
 
 - **Main Section:** There are a section where user can see the details about product .
 
@@ -10,12 +10,8 @@
 
 - **Authentication:** The project implements email and password-based authentication, allowing users to register and log in securely.
 
+## Website Name :
 
-
-## Website Name  :
 **Digital Tech**
 
-
-
 ## Live Site Link:
- 
