@@ -18,7 +18,7 @@ const Offer = () => {
               <Link to="/"   className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Shop Now</Link>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     );
 };
