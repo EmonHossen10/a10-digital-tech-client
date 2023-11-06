@@ -27,7 +27,7 @@ const Update = () => {
 
     // fetching
 
-    fetch(`http://localhost:5000/branddetails/${loadedUser._id}`,{
+    fetch(`https://digital-tech-server.vercel.app/branddetails/${loadedUser._id}`,{
         method:"PUT",
         headers:{
             "content-type":"application/json"

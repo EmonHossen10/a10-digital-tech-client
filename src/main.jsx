@@ -25,29 +25,29 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () => fetch("https://digital-tech-server.vercel.app/brands"),
       },
       {
         path: "/branddetails/:name",
         element: <PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
-        loader: () => fetch(`http://localhost:5000/branddetails/`),
+        loader: () => fetch(`https://digital-tech-server.vercel.app/branddetails/`),
       },
       {
         path: "/productdetails/:id",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/branddetails/${params.id}`),
+          fetch(`https://digital-tech-server.vercel.app/branddetails/${params.id}`),
       },
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://digital-tech-server.vercel.app/cart"),
       },
       {
         path: "/update/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/branddetails/${params.id}`),
+          fetch(`https://digital-tech-server.vercel.app/branddetails/${params.id}`),
       },
 
       {

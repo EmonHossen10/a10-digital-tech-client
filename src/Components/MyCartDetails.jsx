@@ -14,7 +14,7 @@ const MyCartDetails = ({ data, setCartData, cartData }) => {
 
   const handleDelete = (_id) => {
     console.log(_id);
-    fetch(`http://localhost:5000/cart/${_id}`, {
+    fetch(`https://digital-tech-server.vercel.app/cart/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
