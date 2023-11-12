@@ -15,4 +15,4 @@
 **Digital Tech**
 
 ## Live Site Link:
-https://brand-store-e0e44.web.app
+https://655078c660bb2a43e8622858--lively-starship-bc865c.netlify.app/
