@@ -4,6 +4,7 @@ const Banner = () => {
       <section
         className="flex justify-between min-h-full font-roboto items-center p-16 flex-col-reverse  lg:flex-row gap-5
         bg-gradient-to-r from-blue-300 via-purple-300 to-blue-400
+         
       "
       >
         {/* Text part */}

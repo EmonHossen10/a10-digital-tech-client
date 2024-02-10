@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import logo from "../../public/logo.png";
+import Content from "../Content/Content";
 
 const Navbar = () => {
   const { user, Logout } = useContext(AuthContext);
@@ -26,8 +28,7 @@ const Navbar = () => {
     const currentMode = localStorage.getItem("mode") || "light";
     setMode(currentMode);
     const html = document.documentElement;
-    html.classList.add(currentMode)
-
+    html.classList.add(currentMode);
   }, []);
 
   const HandleLogout = () => {
@@ -76,8 +77,9 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 w-11/12 mx-auto ">
-      <div className="navbar-start">
+    <Content>
+      <div className="navbar bg-base-100    ">
+      <div className="navbar-start   ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -103,16 +105,13 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <img
-            className=" lg:w-[200px] w-[100px]  "
-            src="https://i.ibb.co/V2qz5Jc/logo.png"
-            alt=""
-          />
+          <img className=" hidden md:block lg:w-[180px]  w-[100px]  " src={logo} alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1  ">{navlinks}</ul>
       </div>
+      {/* display user name */}
       <div className="navbar-end ">
         {user ? (
           <div className="flex">
@@ -137,10 +136,12 @@ const Navbar = () => {
           </Link>
         )}
       </div>
+      {/* theme change here */}
       <button onClick={changeTheme} className="btn ">
         Theme{" "}
       </button>
     </div>
+    </Content>
   );
 };
 

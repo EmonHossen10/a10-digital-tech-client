@@ -105,7 +105,7 @@ const ProductDetails = () => {
               onClick={() => addToCart(_id, Image, Name, Band_Name, Price)}
               className="btn btn-info"
             >
-              {" "}
+              
               Add to cart
             </button>
           </div>
