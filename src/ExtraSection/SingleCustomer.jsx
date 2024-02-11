@@ -1,7 +1,19 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const SingleCustomer = ({ customer }) => {
   const { name, review, imageUrl } = customer;
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="card  my-10 bg-base-100 shadow-xl">
+    <div
+      className="card  my-10 bg-base-100 shadow-xl"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom"
+    >
       <figure>
         <div className="avatar ">
           <div className="w-32 rounded-full">

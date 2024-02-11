@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
  
 
 const Offer = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
     return (
-        <div className="relative w-full max-w-screen-xl mb-5 mx-auto">
+        <div className="relative w-full max-w-screen-xl mb-5 mx-auto  " data-aos="flip-left"
+        data-aos-easing="ease-out-cubic" data-aos-anchor-placement="bottom-bottom"
+        data-aos-duration="1000" >
         <div className="bg-gray-100 p-4">
           <div className="flex flex-col lg:flex-row gap-3 items-center">
             <img

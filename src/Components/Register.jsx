@@ -58,8 +58,13 @@ const Register = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="hero min-h-screen bg-base-200   ">
-        <div className="shadow-2xl bg-base-300 lg:w-6/12  w-11/12 rounded-xl mx-auto">
+      <div className="hero min-h-screen bg-base-200  py-32  "style={{
+          backgroundImage: 'url("https://i.ibb.co/8zBT99c/background.png")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}>
+        <div className="shadow-2xl bg-base-300 lg:w-6/12  w-11/12 rounded-xl mx-auto"data-aos="zoom-in-right" data-aos-duration="2000">
           <form onSubmit={handleRegister} className="card-body">
             <h2 className="text-black font-bold text-3xl text-center pb-4">
               Register Here

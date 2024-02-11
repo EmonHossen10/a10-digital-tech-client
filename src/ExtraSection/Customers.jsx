@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import SingleCustomer from "./SingleCustomer";
 
+ 
+
 const Customers = () => {
   const [customers, setCustomers] = useState([]);
   useEffect(() => {

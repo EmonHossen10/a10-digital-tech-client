@@ -1,15 +1,24 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Banner = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <section
+        data-aos="fade-right" data-aos-duration="2000" 
         className="flex justify-between min-h-full font-roboto items-center p-16 flex-col-reverse  lg:flex-row gap-5
         bg-gradient-to-r from-blue-300 via-purple-300 to-blue-400
          
       "
       >
         {/* Text part */}
-        <div className="  lg:w-6/12 md:mx-auto">
-          <p className="font-roboto font-bold text-left text-white">
+        <div className="  lg:w-6/12 md:mx-auto" data-aos="flip-left" data-aos-duration="3000"  >
+          <p className="font-roboto text-xl font-bold text-left text-white">
             WELCOME TO OUR WEBSITE
           </p>
           <h2 className=" font-semibold text-4xl my-5 text-left  ">
@@ -26,7 +35,7 @@ const Banner = () => {
           <button className="btn btn-primary">More Details </button>
         </div>
         {/* image part */}
-        <div className=" lg:w-5/12 mx-auto  ">
+        <div className=" lg:w-5/12 mx-auto  "  data-aos="flip-down"data-aos-duration="3000">
           <img
             src="https://i.ibb.co/yqPgWN5/davide-boscolo-gz9njd0z-Yb-Q-unsplash.jpg"
             alt=""

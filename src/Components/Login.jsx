@@ -6,6 +6,10 @@ import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FcGoogle } from "react-icons/fc";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Login = () => {
   const { loginUser, GoogleSignIn } = useContext(AuthContext);
@@ -61,13 +65,27 @@ const Login = () => {
       });
   };
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div>
       <Navbar></Navbar>
 
-      <div className="hero min-h-screen bg-base-200   ">
-        <div className="shadow-2xl bg-base-300 lg:w-6/12 w-11/12 rounded-xl mx-auto">
-          <form onSubmit={handleLogin} className="card-body">
+      <div
+        className="hero min-h-screen  py-32   "   
+        style={{
+          backgroundImage: 'url("https://i.ibb.co/8zBT99c/background.png")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="shadow-2xl bg-base-300 lg:w-6/12 w-11/12 rounded-xl mx-auto"  data-aos="zoom-in-right" data-aos-duration="2000">
+          <form onSubmit={handleLogin} className="card-body"   
+     
+      >
             <h2 className="text-black font-bold text-3xl text-center pb-4">
               Login Here
             </h2>
@@ -99,7 +117,9 @@ const Login = () => {
 
             {/* ************************************************ */}
             <div className="form-control mt-6">
-              <button className="btn btn-accent">Login</button>
+              <button className="btn btn-accent  ">Login</button>
+
+              
             </div>
             <div className="text-center mt-2">
               <p>
@@ -112,12 +132,22 @@ const Login = () => {
                 </Link>
               </p>
             </div>
-            <h2
-              onClick={handleGoogleLogin}
-              className="btn btn-xs    sm:btn-sm md:btn-md lg:btn-lg"
-            >
-              Google Login
-            </h2>
+            <div className="flex items-center pt-4 space-x-1">
+              <div className="flex-1  h-px sm:w-16 bg-gray-700"></div>
+              <p className="px-3 text-sm text-center text-gray-500">
+                Login with social accounts
+              </p>
+              <div className="flex-1  h-px sm:w-16 bg-gray-700"></div>
+            </div>
+            <div className="flex justify-center space-x-4">
+              <button
+                onClick={handleGoogleLogin}
+                aria-label="Log in with Google"
+                className="p-1 rounded-sm"
+              >
+                <FcGoogle className="text-3xl"></FcGoogle>
+              </button>
+            </div>
           </form>
         </div>
       </div>
