@@ -37,9 +37,25 @@ A dynamic and secure MERN (MongoDB, Express, React, Node.js) stack application f
 
 ## 📸 Screenshots
 
-> *()
+> *(https://i.ibb.co/M57hSWK7/a-10.png)
 
 ---
 
 ## 📂 Folder Structure (Basic Overview)
+
+client/
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── routes/
+│ ├── App.jsx
+│ └── main.jsx
+server/
+├── controllers/
+├── models/
+├── routes/
+├── middleware/
+└── server.js
+
+
 
