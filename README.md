@@ -37,7 +37,7 @@ A dynamic and secure MERN (MongoDB, Express, React, Node.js) stack application f
 
 ## 📸 Screenshots
 
-![App Screenshot](https://i.ibb.co/M57hSWK7/a-10.png)
+![App Screenshot](https://i.ibb.co/pv8yWPZw/a-10.png)
 
 
 ---
